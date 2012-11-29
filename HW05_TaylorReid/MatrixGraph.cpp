@@ -24,6 +24,7 @@ MatrixGraph::~MatrixGraph(){
 	  if(u>=0 && u < M.size() && v>=0 && v < M.size() && u!=v && M[u][v]==0 && weight>0){
 		  M[u][v]=weight;
 		  M[v][u]=weight;
+		  num_edges++;
 	  }
   }
   
@@ -76,12 +77,12 @@ MatrixGraph::~MatrixGraph(){
    * Return the number of nodes in the graph.
    */
   unsigned MatrixGraph::size() const {
-	  return 0.0;
+	  return M.size();
   }
 
   /* 
    * Return the number of edges in the graph.
    */
   unsigned MatrixGraph::numEdges() const{
-	  return 0.0;
+	  return num_edges;
   }
