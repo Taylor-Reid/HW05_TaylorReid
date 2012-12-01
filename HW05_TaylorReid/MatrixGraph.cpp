@@ -2,9 +2,13 @@
 
 
 MatrixGraph::MatrixGraph(unsigned num_nodes) {
+	num_edges=0;
 	M.resize(num_nodes);
 	for(int i = 0; i <num_nodes; i++){
 		M[i].resize(num_nodes);
+		for(int j = 0; j <num_nodes; j++){
+			M[i][j]=0;
+		}
 	}
 }
 MatrixGraph::~MatrixGraph(){
@@ -52,7 +56,7 @@ MatrixGraph::~MatrixGraph(){
 	  int counter = 0;
 	  for(int i = 0; i<M[u].size() ; i++){
 		  if(M[u][i] != 0){
-			  aList.push_front(NWPair(u,M[u][i]));
+			  aList.push_back(NWPair(u,M[u][i]));
 		  }
 	  }
 	  return aList;

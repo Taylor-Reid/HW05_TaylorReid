@@ -1,7 +1,9 @@
 #include "ListGraph.h"
 
 ListGraph::ListGraph(int numNodes){
-
+	num_edges=0;
+	edgeList.resize(numNodes);
+	
 }
 ListGraph::~ListGraph(){
 
