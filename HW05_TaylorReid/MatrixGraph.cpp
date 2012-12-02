@@ -52,11 +52,11 @@ MatrixGraph::~MatrixGraph(){
    * Preconditions: u is a legal label.
    */
   std::list<NWPair> MatrixGraph::getAdj(NodeID u) const {
+	  //i don't understand why this doesn't work
 	  std::list<NWPair> aList;
-	  int counter = 0;
 	  for(int i = 0; i<M[u].size() ; i++){
 		  if(M[u][i] != 0){
-			  aList.push_back(NWPair(u,M[u][i]));
+			  aList.push_back(NWPair(i,M[u][i]));
 		  }
 	  }
 	  return aList;

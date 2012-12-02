@@ -21,3 +21,9 @@
  */
 
 std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G);
+
+
+void FindBestTour(Graph* G, std::vector<NodeID> route,NodeID n, NodeID start);
+
+std::vector<NodeID> bestRoute;
+EdgeWeight bestDist;
