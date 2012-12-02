@@ -20,10 +20,12 @@
  *     Every pair of nodes u,v  (u != v) has an edge connecting the of weight > 0.
  */
 
+
 std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G);
 
+void FindBestTour(Graph* G, std::vector<NodeID> route, int n, NodeID start, EdgeWeight thisDist);
 
-void FindBestTour(Graph* G, std::vector<NodeID> route,NodeID n, NodeID start);
+void swap(std::vector<NodeID> route, int u, int v);
 
-std::vector<NodeID> bestRoute;
-EdgeWeight bestDist;
+static std::vector<NodeID> bestRoute;
+static EdgeWeight bestDist;
